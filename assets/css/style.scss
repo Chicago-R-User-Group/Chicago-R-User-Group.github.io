@@ -1,0 +1,53 @@
+---
+---
+
+@import "jekyll-theme-tactile";
+
+header{
+   background: url(../../images/header-background.png) 100% 100% no-repeat;
+}
+
+.downloads {
+   height: 0%;
+}
+
+
+.inner {
+   padding-top: 0px;
+   width: 1400px;
+   margin: 0 auto;
+}
+  
+p {
+   font-size: 22px;
+}
+
+.inner table {
+   font-size: 22px;
+   width: 90%;
+   margin: 0 auto;
+}
+
+.inner td {
+   width: 33%;
+}
+
+//tr:nth-child(odd){background-color: #fff;}
+//tr:nth-child(even){background-color: #DCDCDC;}
+
+#headers {
+   width: 40%;
+   font-size: 16px; 
+   float: right; 
+   margin-top: -195px;
+   border: 1px;
+   table-layout: fixed;
+}
+
+code {
+   font-size: 16px;
+}
+
+pre {
+   border-radius: 25px;
+}
