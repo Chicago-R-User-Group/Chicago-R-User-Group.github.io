@@ -15,6 +15,8 @@ layout: default
   </tbody>
 </table>
 
+# <u>Resources</u>
+
 A mainstay of the R language is the emphasis of open in open-source. As such, R is an emerging tool among private, public, and non-profit ventures. See below for a few of its many outlets.
 
 # **Organizations**

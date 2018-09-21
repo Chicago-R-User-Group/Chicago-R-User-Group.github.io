@@ -15,6 +15,7 @@ layout: default
   </tbody>
 </table>
 
+# <u>Mission</u>
 As a volunteer, free, open, community group, our mission is to support individual useRs and the R community. Specifically, we aim to:
 
 

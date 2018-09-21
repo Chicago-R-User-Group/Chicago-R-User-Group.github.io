@@ -15,7 +15,8 @@ layout: default
   </tbody>
 </table>
 
-Find us. Engage with us. Network with us:
+# <u>Find Us</u>
+Connect with us. Engage with us. Network with us:
 
 
 # **Meetup**

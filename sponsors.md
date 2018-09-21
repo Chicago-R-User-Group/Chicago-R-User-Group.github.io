@@ -15,6 +15,7 @@ layout: default
   </tbody>
 </table>
 
+# <u>Sponsors</u>
 Below are current sponsors who help provide refreshments, venues, and overall support of our endeavors.
 
 # **Microsoft**

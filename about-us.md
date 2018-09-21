@@ -15,6 +15,7 @@ layout: default
   </tbody>
 </table>
 
+# <u>About Us</u>
 Founded in 2010, CRUG has become a cornerstone of the Chicago R community. Born from the financial ecosystem, Paul Teetor later led the second generation of CRUG. 
 
 Below are current organizers made up of all walks of life from mathematicians and statisticians to data analysts and scientists to economists and transportation planners to professors:
