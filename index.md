@@ -15,17 +15,17 @@ layout: default
   </tbody>
 </table>
 
-# <center>Welcome fellow useRs! Or as we say in byte conversion code:</center>
+# <center>Hello world! Or as we say in byte conversion code:</center>
 
 ```r
-str <- paste0("48656c6c6f20576f726c642057696465205765622c204772656574696e67732066726f6d204368696361676f20522055736572732047726f757021")
+str <- paste0("48656c6c6f20576f726c642057696465205765622c204772656574696e67732066726f6d204368696361676f205220557365722047726f757021")
 hex <- sapply(seq(1, nchar(str), by=2), function(x) substr(str, x, x+1))
 
 print(rawToChar(as.raw(strtoi(hex, 16L))))
-# [1] "Hello World Wide Web, Greetings from Chicago R Users Group!"
+# [1] "Hello World Wide Web, Greetings from Chicago R User Group!"
 ```
 
-Like the open-source, community-strong language we come to love, we are a Chicago-based community of R specialists and enthusiasts here to foster collaboration, education, networking, and engagement among each other and other public and private organizations.
+Like the open-source, community-active language (actually environment), we are a Chicago-based group of R specialists and enthusiasts here to foster collaboration, education, networking, and engagement among each other and other public and private organizations.
 
 See below our past events and projects, diving into the entire spectrum of data analytics and data science.
 

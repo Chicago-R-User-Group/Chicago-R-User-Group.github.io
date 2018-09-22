@@ -40,7 +40,7 @@ useRs <- useRs ^ Inf
 # **To promote and engage.**
 
 ```r
-View(community); stopifnot(withVisible(useRs)$visible == TRUE)
+View(community)
 ```
 
 # **To help and educate.**
