@@ -2,18 +2,16 @@
 layout: default
 ---
 
-<table id="headers">
-  <tbody>
-    <tr>
-      <td><a href="index.html">Home</a></td>
-      <td><a href="mission.html">Mission</a></td>
-      <td><a href="resources.html">Resources</a></td>
-      <td><a href="sponsors.html">Sponsors</a></td>
-      <td><a href="about-us.html">About Us</a></td>
-      <td><a href="find-us.html">Find Us</a></td>
-    </tr>
-  </tbody>
-</table>
+<nav>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="mission.html">Mission</a></li>
+    <li><a href="sponsors.html">Sponsors</a></li>
+    <li><a href="resources.html">Resources</a></li>
+    <li><a href="about-us.html">About Us</a></li>
+    <li id="selected"><a href="find-us.html">Find Us</a></li>
+  </ul>
+</nav>
 
 # <u>Find Us</u>
 Connect with us. Engage with us. Network with us:

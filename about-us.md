@@ -2,18 +2,16 @@
 layout: default
 ---
 
-<table id="headers">
-  <tbody>
-    <tr>
-      <td><a href="index.html">Home</a></td>
-      <td><a href="mission.html">Mission</a></td>
-      <td><a href="resources.html">Resources</a></td>
-      <td><a href="sponsors.html">Sponsors</a></td>
-      <td><a href="about-us.html">About Us</a></td>
-      <td><a href="find-us.html">Find Us</a></td>
-    </tr>
-  </tbody>
-</table>
+<nav>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="mission.html">Mission</a></li>
+    <li><a href="sponsors.html">Sponsors</a></li>
+    <li><a href="resources.html">Resources</a></li>
+    <li id="selected"><a href="about-us.html">About Us</a></li>
+    <li><a href="find-us.html">Find Us</a></li>
+  </ul>
+</nav>
 
 # <u>About Us</u>
 Founded in 2010, CRUG has become a cornerstone of the Chicago R community. Born from the financial ecosystem, Paul Teetor later led the second generation of CRUG. 

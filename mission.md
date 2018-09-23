@@ -2,18 +2,16 @@
 layout: default
 ---
 
-<table id="headers">
-  <tbody>
-    <tr>
-      <td><a href="index.html">Home</a></td>
-      <td><a href="mission.html">Mission</a></td>
-      <td><a href="resources.html">Resources</a></td>
-      <td><a href="sponsors.html">Sponsors</a></td>
-      <td><a href="about-us.html">About Us</a></td>
-      <td><a href="find-us.html">Find Us</a></td>
-    </tr>
-  </tbody>
-</table>
+<nav>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li id="selected"><a href="mission.html">Mission</a></li>
+    <li><a href="sponsors.html">Sponsors</a></li>
+    <li><a href="resources.html">Resources</a></li>
+    <li><a href="about-us.html">About Us</a></li>
+    <li><a href="find-us.html">Find Us</a></li>
+  </ul>
+</nav>
 
 # <u>Mission</u>
 As a volunteer, free, open, community group, our mission is to support individual useRs and the R community. Specifically, we aim to:
