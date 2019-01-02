@@ -12,29 +12,20 @@ layout: default
     <li><a href="find-us.html">Find Us</a></li>
   </ul>
 </nav>
+<br/>
 
-# <center>Hello world! Or as we say in byte conversion code:</center>
+<p align="center">Like the open-source, community-active language, CRUG is a Chicago-based user group of R specialists and enthusiasts here to foster collaboration, education, networking, and engagement among each other and other public and private organizations.
 
-```r
-str <- paste0("48656c6c6f20576f726c642057696465205765622c204772656574696e67732066726f6d204368696361676f205220557365722047726f757021")
-hex <- sapply(seq(1, nchar(str), by=2), function(x) substr(str, x, x+1))
-
-print(rawToChar(as.raw(strtoi(hex, 16L))))
-# [1] "Hello World Wide Web, Greetings from Chicago R User Group!"
-```
-
-Like the open-source, community-active language (actually environment), we are a Chicago-based group of R specialists and enthusiasts here to foster collaboration, education, networking, and engagement among each other and other public and private organizations.
-
-See below our past events and projects, diving into the entire spectrum of data analytics and data science.
+See below our past events and projects, diving into the entire spectrum of data analytics and data science.</p>
 
 ---
 
 
 # <center><strong>2018 Meetups</strong></center><br/>
 
-| [**2018-n7-CRUG-PUG**](https://github.com/Chicago-R-User-Group/2018-n7-CRUG-PUG)             | [**2018-n6-CRUG-ChiPy**](https://github.com/Chicago-R-User-Group/2018-n6-CRUG-ChiPy)                       | [**2018-n5--Pre-RFinance-meetup**](https://github.com/Chicago-R-User-Group/2018-n5--Pre-RFinance-meetup) |
-| ...                                                                                          | [**2018-n4-R-from-the-Beginning**](https://github.com/Chicago-R-User-Group/2018-n4-R-from-the-Beginning)   | ...                                                                                                      |
-| [**2018-n3-Double-Feature**](https://github.com/Chicago-R-User-Group/2018-n3-Double-Feature) | [**2018-n2-Data-Robot-Talks**](https://github.com/Chicago-R-User-Group/2018-n2)                            | [**2018-n1-Happy-New-YeaR**](https://github.com/Chicago-R-User-Group/2018-n1-Happy-New-YeaR)             |
+| [**2018-n9-bRew-and-View** <br/>  ![brew and view icon](images/brew_view.png)](https://github.com/Chicago-R-User-Group/2018-n9-bRew-and-View)        | [**2018-n8-Hacktoberfest** <br/> ![r and postgres icon](images/hackathon.png) ](https://github.com/Chicago-R-User-Group/2018-n8-Hacktoberfest)               | [**2018-n7-CRUG-PUG** <br/> ![r and postgres icon](images/r_pg.png)](https://github.com/Chicago-R-User-Group/2018-n7-CRUG-PUG)                              |
+| [**2018-n6-CRUG-ChiPy** <br/>   ![r and python icon](images/r_python.png)](https://github.com/Chicago-R-User-Group/2018-n6-CRUG-ChiPy)               | [**2018-n5--Pre-RFinance-meetup** <br/>  ![r and finance icon](images/r_finance.png)](https://github.com/Chicago-R-User-Group/2018-n5--Pre-RFinance-meetup)  | [**2018-n4-R-from-the-Beginning** <br/>  ![r from begin icon](images/from_begin.png)](https://github.com/Chicago-R-User-Group/2018-n4-R-from-the-Beginning) |
+| [**2018-n3-Double-Feature** <br/> ![double feature icon](images/double_feature.png)](https://github.com/Chicago-R-User-Group/2018-n3-Double-Feature) | [**2018-n2-Data-Robot-Talks** <br/>   ![data robot icon](images/data_robot.png)](https://github.com/Chicago-R-User-Group/2018-n2)                            | [**2018-n1-Happy-New-YeaR**  <br/>  ![new year icon](images/new_year.png)](https://github.com/Chicago-R-User-Group/2018-n1-Happy-New-YeaR)                  |
 
 
 &nbsp;
@@ -42,23 +33,23 @@ See below our past events and projects, diving into the entire spectrum of data 
 
 # <center><strong>2017 Meetups</strong></center><br/>
 
-| [**2017-n7-Machine-Learning**](https://github.com/Chicago-R-User-Group/2017-n7-Machine-Learning-High-Frequency-Time-Series) | [**2017-n6-SatuRday-short-talks**](https://github.com/Chicago-R-User-Group/2017-n6-meetup-SatuRday-short-talks)  | [**2017-n5-Meetup-SolarFlares**](https://github.com/Chicago-R-User-Group/2017-n5-Meetup-SolarFlares) |
-| ...                                                                                                                         | [**2017-n4-Syberia**](https://github.com/Chicago-R-User-Group/2017-n4-Meetup-Syberia)                            | ...                                                                                                  |
-| [**2017-n3-Meetup-RStudio**](https://github.com/Chicago-R-User-Group/2017-n3-Meetup-RStudio)                                | [**2017-n2-Predictive-Financial**](https://github.com/Chicago-R-User-Group/2017-n2-Meetup)                       | [**2017-n1-Meetup-New-Year-New-to-R**](https://github.com/Chicago-R-User-Group/2017-n1-Meetup)       |
+| [**2017-n7-Machine-Learning** <br/> ![machine learning icon](images/machine_learning.png)](https://github.com/Chicago-R-User-Group/2017-n7-Machine-Learning-High-Frequency-Time-Series)  | [**2017-n6-SatuRday-short-talks**  <br/>  ![saturday talks icon](images/sat_talks.png)](https://github.com/Chicago-R-User-Group/2017-n6-meetup-SatuRday-short-talks)  | [**2017-n5-Meetup-SolarFlares** <br/> ![sun icon](images/solar_flares.png)](https://github.com/Chicago-R-User-Group/2017-n5-Meetup-SolarFlares) |
+| ...                                                                                                                                                                                      | [**2017-n4-Syberia**   <br/>  ![syberia icon](images/syberia.png)](https://github.com/Chicago-R-User-Group/2017-n4-Meetup-Syberia)                                    | ...                                                                                                                                             |
+| [**2017-n3-Meetup-RStudio** <br/> ![r studio icon](images/r_studio.png)](https://github.com/Chicago-R-User-Group/2017-n3-Meetup-RStudio)                                                 | [**2017-n2-Predictive-Financial**  <br/>  ![predict icon](images/predict_r.png)](https://github.com/Chicago-R-User-Group/2017-n2-Meetup)                              | [**2017-n1-Meetup-New-Year-New-to-R**   <br/>  ![new year icon](images/new_year.png)](https://github.com/Chicago-R-User-Group/2017-n1-Meetup)   |
 
 &nbsp;
 
 # <center><strong>2011-2016 Meetups</strong></center><br/>
 
-| [**2016 Meetups**](https://github.com/Chicago-R-User-Group/2016-Meetups) | **2015 Meetups**                                                         | [**2014 Meetups**](https://github.com/Chicago-R-User-Group/2014-Meetups) |
-| [**2013 Meetups**](https://github.com/Chicago-R-User-Group/2013-Meetups) | [**2012 Meetups**](https://github.com/Chicago-R-User-Group/2012-Meetups) | [**2011 Meetups**](https://github.com/Chicago-R-User-Group/2011-Meetups) |
+| [**2016 Meetups** <br/> ![calendar icon](images/meetups_year.png)](https://github.com/Chicago-R-User-Group/2016-Meetups) | **2015 Meetups**   <br/> ![calendar icon](images/meetups_year.png)                                                       | [**2014 Meetups** <br/> ![calendar icon](images/meetups_year.png)](https://github.com/Chicago-R-User-Group/2014-Meetups) |
+| [**2013 Meetups** <br/> ![calendar icon](images/meetups_year.png)](https://github.com/Chicago-R-User-Group/2013-Meetups) | [**2012 Meetups** <br/> ![calendar icon](images/meetups_year.png)](https://github.com/Chicago-R-User-Group/2012-Meetups) | [**2011 Meetups** <br/> ![calendar icon](images/meetups_year.png)](https://github.com/Chicago-R-User-Group/2011-Meetups) |
 
 
 &nbsp;
 
 ---
 
-From base R apply family to machine learning with keras to the extendability of R to big data loading and migration, our events are filled with analytical passion among our speakers, audiences, members, and organizers!
+<p align="center">From base R apply family to machine learning with keras to the extendability of R to big data loading and migration, our events are filled with analytical passion among our speakers, audiences, members, and organizers!</p>
 
 
 &nbsp;

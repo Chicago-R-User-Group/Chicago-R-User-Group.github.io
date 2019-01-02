@@ -3,8 +3,13 @@
 
 @import "jekyll-theme-tactile";
 
+a:hover {
+  color: #2C67B1;
+}
+
 header{
    background: url(../../images/header-background.png) 100% 100% no-repeat;
+   height: 100px;
 }
 
 .downloads {
@@ -24,7 +29,7 @@ p {
 
 nav {
         float: right; 
-        margin-top: -200px;
+        margin: -200px 0 0 0;
         padding: 0 0 10px 0;
 }
 nav ul {
@@ -62,7 +67,7 @@ nav li:hover {
 }
 
 nav li:hover a {
-	background: #d5000d;
+	background: #2C67B1;
 	color: #FFF;
 }
 
