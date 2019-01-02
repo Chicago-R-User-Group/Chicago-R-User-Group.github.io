@@ -1,5 +1,7 @@
 # Chicago R Users Group Website
 
+![CRUG logo](images/header-background.png)
+
 Build on the *Tactile Jekyll theme for GitHub Pages*, the website is powered by GitHub and includes:
 
 - **Events: What We Have Done**
