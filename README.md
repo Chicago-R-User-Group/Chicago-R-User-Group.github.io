@@ -1,4 +1,4 @@
-# Chicago R Users Group Website
+# Official Git Website
 
 ![CRUG logo](images/header-background.png)
 
