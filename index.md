@@ -14,9 +14,7 @@ layout: default
 </nav>
 <br/>
 
-<p align="center">Like the open-source, community-active language, CRUG is a Chicago-based user group of R specialists and enthusiasts here to foster collaboration, education, networking, and engagement among each other and other public and private organizations.
-
-See below our past events and projects, diving into the entire spectrum of data analytics and data science.</p>
+## <center>We are the Chicago R User Group (CRUG), a local meetup group who organizes events for users in the R environment. Our events fosters collaboration, education, and networking in the data and programming Chicago ecosystem. See below our past events and projects, diving into the entire spectrum of data analytics and data science. </center>
 
 ---
 
@@ -49,7 +47,7 @@ See below our past events and projects, diving into the entire spectrum of data 
 
 ---
 
-<p align="center">From base R apply family to machine learning with keras to the extendability of R to big data loading and migration, our events are filled with analytical passion among our speakers, audiences, members, and organizers!</p>
+## <center>From base R apply family to machine learning with keras to the extendability of R to big data loading and migration, our events are filled with analytical passion among our speakers, audiences, members, and organizers!</center>
 
 
 &nbsp;
