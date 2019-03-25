@@ -1,4 +1,4 @@
-# Chicago R Users Group Website
+# Official Meetup Group Website
 
 ![CRUG logo](images/header-background.png)
 

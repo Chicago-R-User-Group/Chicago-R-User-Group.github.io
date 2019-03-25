@@ -432,6 +432,9 @@ header {
 .downloads {
   height: 0%; }
 
+img {
+  border-radius: 15px; }
+
 .inner {
   padding: 0px 50px 0px 50px;
   width: 1400px;
