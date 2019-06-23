@@ -14,14 +14,15 @@ layout: default
 </nav>
 <br/>
 
-## <center>We are the Chicago R User Group (CRUG), a local-area meetup group who organizes and host events for users in the R environment. Our events foster collaboration, education, and networking in the data and programming Chicago ecosystem. See below our past events and projects, diving into the entire spectrum of data analytics and data science. </center>
+<p style="font-size:22px; text-align:center">We are the Chicago R User Group (CRUG), a local-area meetup group who organizes and host events for users in the R environment. Our events foster collaboration, education, and networking in the data and programming Chicago ecosystem. See below our past events and projects, diving into the entire spectrum of data analytics and data science. </p>
 
 ---
 
 
 # <center><strong>2019 Meetups</strong></center><br/>
 
-| [**2019-n1-Single-Fct-Lightning-Talks** <br/> ![function icon](images/function.png)](https://github.com/Chicago-R-User-Group/2019-n1-Single-Function-Lightning-Talks)  | [**2019-n2-Hardware-for-Data-Science** <br/> ![python r hardware icon](images/Hardware_DataScience.png)](https://github.com/Chicago-R-User-Group/2019-n2-Hardware-for-Data-Science)  | [**2019-n3-Big-Data-and-Biking** <br/> ![bike lane uprising icon](images/BikeLaneUprising.png)](https://github.com/Chicago-R-User-Group/2019-n3-Big-Data-and-Biking) |
+| [**2019-n5-Joint-Meetup-Chicago-Women-In-Big-Data** <br/> ![joint big data icon](images/women_big_data.png)](https://github.com/Chicago-R-User-Group/2019-n5-Joint-Meetup-Chicago-Women-In-Big-Data)  |                                                                                                                                                                                      | [**2019-n4-Pre-R-Finance-Talks-and-an-Open-Mic** <br/> ![open mic icon](images/open_mic.png)](https://github.com/Chicago-R-User-Group/2019-n4-Pre-R-Finance-Talks-and-an-Open-Mic) |
+| [**2019-n1-Single-Fct-Lightning-Talks** <br/> ![function icon](images/function.png)](https://github.com/Chicago-R-User-Group/2019-n1-Single-Function-Lightning-Talks)                                 | [**2019-n2-Hardware-for-Data-Science** <br/> ![python r hardware icon](images/Hardware_DataScience.png)](https://github.com/Chicago-R-User-Group/2019-n2-Hardware-for-Data-Science)  | [**2019-n3-Big-Data-and-Biking** <br/> ![bike lane uprising icon](images/BikeLaneUprising.png)](https://github.com/Chicago-R-User-Group/2019-n3-Big-Data-and-Biking)               |   |
 
 &nbsp;
 
