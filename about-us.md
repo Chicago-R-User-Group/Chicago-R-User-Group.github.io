@@ -14,7 +14,7 @@ layout: default
 </nav>
 
 # <u>About Us</u>
-Founded in 2010, CRUG has become a cornerstone of the Chicago R community. Today, in its second generation of leadership CRUG has grown to about 3,500 members.
+Founded in 2010, CRUG has become a cornerstone of the Chicago R community. Today, in its second generation of leadership CRUG has grown to over 3,500 members.
 
 Below are current organizers made up of various analytical backgrounds: from mathematicians and statisticians to data analysts and scientists to economists and transportation planners to professors.
 
