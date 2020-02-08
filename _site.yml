@@ -11,10 +11,13 @@ navbar:
       icon: fa-user 
       href: about-us.html
     - text: "resources"
-      icon: fa-file-pdf-o
+      icon: fa-link
       href: resources.html
+    - text: "mission"
+      icon: fa-flag-checkered
+      href: mission.html
     - text: "sponsors"
-      icon: fa-rss
+      icon: fa-life-ring
       href: sponsors.html
   right:
     - text: "Meetup"
@@ -31,5 +34,6 @@ navbar:
       href: https://github.com/Chicago-R-User-Group
 output:
   html_document:
-    theme: cosmo
+    css: style.css
+    theme: cerulean
     highlight: textmate

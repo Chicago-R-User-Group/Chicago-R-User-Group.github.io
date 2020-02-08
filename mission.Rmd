@@ -1,20 +1,22 @@
 ---
+title: Mission
 layout: default
 ---
 
-<nav>
-  <ul>
-    <li><a href="index.html">Home</a></li>
-    <li id="selected"><a href="mission.html">Mission</a></li>
-    <li><a href="sponsors.html">Sponsors</a></li>
-    <li><a href="resources.html">Resources</a></li>
-    <li><a href="about-us.html">About Us</a></li>
-    <li><a href="find-us.html">Find Us</a></li>
-  </ul>
-</nav>
+<style type="text/css">
+.main-container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+</style>
 
-# <u>Mission</u>
-As a volunteer, free, open, community group, our mission is to support individual useRs and the R community. Specifically, we aim to:
+<br/>
+
+### As a volunteer, free, open, community group, our mission is to support individual useRs and the R community. Specifically, we aim to:
+
+
+<br/>
 
 
 # **To connect and collaborate.**
@@ -23,11 +25,16 @@ As a volunteer, free, open, community group, our mission is to support individua
 all_useRs <- merge(crug, world, by="people.id", all=TRUE)
 ```
 
+<br/>
+
+
 # **To build relationships locally and globally.**
 
 ```r
 community <- do.call(rbind, eapply(.GlobalEnv, identity))
 ```
+
+<br/>
 
 # **To empower and inspire.**
 
@@ -35,11 +42,15 @@ community <- do.call(rbind, eapply(.GlobalEnv, identity))
 useRs <- useRs ^ Inf
 ```
 
+<br/>
+
 # **To promote and engage.**
 
 ```r
 View(community)
 ```
+
+<br/>
 
 # **To help and educate.**
 

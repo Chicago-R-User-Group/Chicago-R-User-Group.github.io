@@ -1,19 +1,19 @@
 ---
+title: Resources
 layout: default
 ---
 
-<nav>
-  <ul>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="mission.html">Mission</a></li>
-    <li><a href="sponsors.html">Sponsors</a></li>
-    <li id="selected"><a href="resources.html">Resources</a></li>
-    <li><a href="about-us.html">About Us</a></li>
-    <li><a href="find-us.html">Find Us</a></li>
-  </ul>
-</nav>
+<style type="text/css">
+.main-container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+</style>
 
-# <u>Resources</u>
+<br/>
+<br/>
+
 
 # **Organizations**
 

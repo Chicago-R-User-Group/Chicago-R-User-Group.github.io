@@ -1,19 +1,19 @@
 ---
+title: Find Us
 layout: default
 ---
 
-<nav>
-  <ul>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="mission.html">Mission</a></li>
-    <li><a href="sponsors.html">Sponsors</a></li>
-    <li><a href="resources.html">Resources</a></li>
-    <li><a href="about-us.html">About Us</a></li>
-    <li id="selected"><a href="find-us.html">Find Us</a></li>
-  </ul>
-</nav>
+<style type="text/css">
+.main-container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+</style>
 
-# <u>Find Us</u>
+<br/>
+<br/>
+
 Connect with us. Engage with us. Network with us:
 
 

@@ -1,30 +1,31 @@
 ---
+title: Sponsors
 layout: default
 ---
 
-<nav>
-  <ul>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="mission.html">Mission</a></li>
-    <li id="selected"><a href="sponsors.html">Sponsors</a></li>
-    <li><a href="resources.html">Resources</a></li>
-    <li><a href="about-us.html">About Us</a></li>
-    <li><a href="find-us.html">Find Us</a></li>
-  </ul>
-</nav>
+<style type="text/css">
+.main-container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+</style>
 
-# <u>Sponsors</u>
-Below are current sponsors who help provide refreshments, venues, and overall support of our endeavors.
+<br/>
+<br/>
+
+### Below are current sponsors who help provide refreshments, venues, and overall support of our endeavors.
+
+
 
 # **IBM**
-![IBM icon](https://github.com/Chicago-R-User-Group/2018-n2/blob/master/Images/IBM-Logo.jpg?raw=true)
+![](images/IBM-logo-black.png)
 
-# **Microsoft**
-![Microsoft Advocates icon](images/microsoft-advocates-icon.jpg)
 
-# **R Consortium**
-![R consortium icon](images/r-consortium-icon.jpg)
+<br/>
+<br/>
+
 
 # **IIT Stuart**
-![IIT Stuart icon](images/IIT-Stuart-icon.jpg)
+![](images/IIT-Stuart-icon.jpg)
 
