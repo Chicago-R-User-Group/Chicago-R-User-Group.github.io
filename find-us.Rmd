@@ -14,7 +14,10 @@ layout: default
 <br/>
 <br/>
 
-Connect with us. Engage with us. Network with us:
+
+### Connect with us. Engage with us. Network with us.
+
+<br/>
 
 
 # **Meetup**

@@ -11,8 +11,10 @@ layout: default
 }
 </style>
 
+<br/>
+<br/>
 
-<div style="text-align:right"><img src="images/header-background.png" alt="crug logo"/></div>
+<div style="float:right"><img src="images/header-background.png" alt="crug logo"/></div>
 
 
 ### We are the Chicago R User Group (CRUG), a local meetup group who organizes and host events for users in the open source R environment to foster collaboration, education, and networking in the data science Chicago ecosystem. Take a tour below of our past events exploring all aspects of analytics and data science.
@@ -20,8 +22,9 @@ layout: default
 
 ---
 
+<br/>
+
 ```{r echo=FALSE}
-library(DT)
 library(kableExtra)
 ```
 

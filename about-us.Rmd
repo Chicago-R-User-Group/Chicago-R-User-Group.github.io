@@ -20,33 +20,28 @@ layout: default
 
 ---
 
-## **Justin Shea** 
-### Econ Professor/Consultant
-![](images/linkedin_justin_shea.jpeg) 
 
-<br/>
+```{r echo=FALSE}
+library(kableExtra)
+```
 
-## **Troy Hernandez** 
-### IBM Architect 
-![](images/linkedin_troy_hernandez.jpeg) 
+```{r echo=FALSE}
+crug_df <- data.frame(Organizer = c('<h4>Justin Shea</h4>', '<h4>Troy Hernandez</h4>', '<h4>Charlotte Frei</h4>',
+                                    '<h4>Adam Ginensky</h4>', '<h4>Parfait Gasana</h4>'),
+                      Title = c('<h4>Econ Professor/Consultant</h4>', '<h4>IBM Architect </h4>', 
+                                '<h4>Transportation Planner</h4>',
+                                '<h4>Applied Mathematician</h4>', '<h4>Econ Data Analyst</h4>'),
+                      Image = c('<img src="images/linkedin_justin-shea.png" alt="organizer photo"/>',
+                                '<img src="images/linkedin_troy_hernandez.jpeg" alt="organizer photo"/>',
+                                '<img src="images/linkedin_charlotte-frei.png" alt="organizer photo"/>',
+                                '<img src="images/linkedin_adam_ginensky.jpeg" alt="organizer photo"/>',
+                                '<img src="images/linkedin_parfait_gasana.jpeg" alt="organizer photo"/>'))
+```
 
-<br/>
 
-## **Charlotte Frei** 
-### Transportation Planner 
-![](images/linkedin_charlotte_frei.jpeg)
+```{r echo=FALSE}
+kable_styling(kable(crug_df, escape = FALSE, align = "lcc"),
+              bootstrap_options = c("striped", "hover"), font_size = 14)
+```
 
-<br/>
-
-## **Adam Ginensky**
-### Applied Mathematician 
-![](images/linkedin_adam_ginensky.jpeg)
-
-<br/>
-
-## **Parfait Gasana** 
-### Econ Data Analyst <br/> 
-![](images/linkedin_parfait_gasana.jpeg)   
-
-<br/>
 
