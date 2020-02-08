@@ -1,0 +1,35 @@
+name: "Chicago R User Group" 
+output_dir: "."
+navbar:
+  title: "Chicago R User Group"
+  type: inverse
+  left:
+    - text: "Home"
+      icon: fa-home
+      href: index.html
+    - text: "About"
+      icon: fa-user 
+      href: about-us.html
+    - text: "resources"
+      icon: fa-file-pdf-o
+      href: resources.html
+    - text: "sponsors"
+      icon: fa-rss
+      href: sponsors.html
+  right:
+    - text: "Meetup"
+      icon: fa-meetup
+      href: https://www.meetup.com/ChicagoRUG/
+    - text: "Slack"
+      icon: fa-slack
+      href: https://chicagorusergroup.slack.com/
+    - text: "Twitter"
+      icon: fa-twitter
+      href: https://twitter.com/ChicagoRusers
+    - text: "GitHub"
+      icon: fa-github
+      href: https://github.com/Chicago-R-User-Group
+output:
+  html_document:
+    theme: cosmo
+    highlight: textmate
