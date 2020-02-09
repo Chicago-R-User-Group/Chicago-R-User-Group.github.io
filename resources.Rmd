@@ -9,6 +9,10 @@ layout: default
   margin-left: auto;
   margin-right: auto;
 }
+
+.navbar-collapse.in {
+  display: block !important;
+}
 </style>
 
 <br/>

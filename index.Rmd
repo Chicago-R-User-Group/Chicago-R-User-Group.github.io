@@ -10,6 +10,9 @@ layout: default
   margin-right: auto;
 }
 
+.navbar-collapse.in {
+  display: block !important;
+}
 </style>
 
 <div style="text-align:right"><img src="images/header-background.png" alt="crug logo"/></div>
