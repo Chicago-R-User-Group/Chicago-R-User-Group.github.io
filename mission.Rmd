@@ -10,8 +10,8 @@ layout: default
   margin-right: auto;
 }
 
-.navbar-collapse.in {
-  display: block !important;
+.navbar-collapse.collapse.in {
+  display: block!important;
 }
 </style>
 
