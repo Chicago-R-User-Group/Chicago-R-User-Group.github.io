@@ -9,12 +9,10 @@ layout: default
   margin-left: auto;
   margin-right: auto;
 }
+
 </style>
 
-<br/>
-<br/>
-
-<div style="float:right"><img src="images/header-background.png" alt="crug logo"/></div>
+<div style="text-align:right"><img src="images/header-background.png" alt="crug logo"/></div>
 
 
 ### We are the Chicago R User Group (CRUG), a local meetup group who organizes and host events for users in the open source R environment to foster collaboration, education, and networking in the data science Chicago ecosystem. Take a tour below of our past events exploring all aspects of analytics and data science.
@@ -37,8 +35,9 @@ crug_df <- within(read.csv("crug_meetups.csv"), {
 })
 ```
 
+# Meetups {.tabset .tabset-fade .tabset-pills}
 
-# 2020 Meetups
+## 2020
 
 
 ```{r echo=FALSE}
@@ -52,7 +51,7 @@ kable_styling(kable(meetup_df , escape = FALSE, align = "lc"),
 <br/>
 <br/>
 
-# 2019 Meetups
+## 2019
 
 
 ```{r echo=FALSE}
@@ -68,7 +67,7 @@ kable_styling(kable(meetup_df , escape = FALSE, align = "lc"),
 <br/>
 
 
-# 2018 Meetups
+## 2018
 
 ```{r echo=FALSE}
 meetup_df <- data.frame(transform(subset(crug_df, YEAR == 2018), YEAR = NULL)[c("MEETUP", "IMAGE")],
@@ -82,7 +81,7 @@ kable_styling(kable(meetup_df , escape = FALSE, align = "lc"),
 <br/>
 
 
-# 2017 Meetups
+## 2017
 
 ```{r echo=FALSE}
 meetup_df <- data.frame(transform(subset(crug_df, YEAR == 2017), YEAR = NULL)[c("MEETUP", "IMAGE")],
@@ -96,7 +95,7 @@ kable_styling(kable(meetup_df , escape = FALSE, align = "lc"),
 <br/>
 
 
-# 2011-2016 Meetups
+## 2011-2016
 
 ```{r echo=FALSE}
 meetup_df <-  data.frame(transform(subset(crug_df, YEAR <= 2016), YEAR = NULL)[c("MEETUP", "IMAGE")],

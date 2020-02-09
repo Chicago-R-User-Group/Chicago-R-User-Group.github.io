@@ -372,9 +372,36 @@ $(document).ready(function () {
   margin-left: auto;
   margin-right: auto;
 }
+
+
+@media (max-width: 990px) {
+    .navbar-header {
+        float: none;
+    }
+    .navbar-toggle {
+        display: block;
+    }
+    .navbar-collapse {
+        border-top: 1px solid transparent;
+        box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+    }
+    .navbar-collapse.collapse {
+        display: none!important;
+    }
+    .navbar-nav {
+        float: none!important;
+        margin: 7.5px -15px;
+    }
+    .navbar-nav>li {
+        float: none;
+    }
+    .navbar-nav>li>a {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+}
 </style>
-<p><br/> <br/></p>
-<div style="float:right">
+<div style="text-align:right">
 <img src="images/header-background.png" alt="crug logo"/>
 </div>
 <div id="we-are-the-chicago-r-user-group-crug-a-local-meetup-group-who-organizes-and-host-events-for-users-in-the-open-source-r-environment-to-foster-collaboration-education-and-networking-in-the-data-science-chicago-ecosystem.-take-a-tour-below-of-our-past-events-exploring-all-aspects-of-analytics-and-data-science." class="section level3">
@@ -382,8 +409,10 @@ $(document).ready(function () {
 <hr />
 <p><br/></p>
 </div>
-<div id="meetups" class="section level1">
-<h1>2020 Meetups</h1>
+<div id="meetups" class="section level1 tabset tabset-fade tabset-pills">
+<h1>Meetups</h1>
+<div id="section" class="section level2">
+<h2>2020</h2>
 <table class="table table-striped table-hover" style="font-size: 14px; margin-left: auto; margin-right: auto;">
 <thead>
 <tr>
@@ -412,8 +441,8 @@ IMAGE
 </table>
 <p><br/> <br/></p>
 </div>
-<div id="meetups-1" class="section level1">
-<h1>2019 Meetups</h1>
+<div id="section-1" class="section level2">
+<h2>2019</h2>
 <table class="table table-striped table-hover" style="margin-left: auto; margin-right: auto;">
 <thead>
 <tr>
@@ -538,8 +567,8 @@ IMAGE
 </table>
 <p><br/> <br/></p>
 </div>
-<div id="meetups-2" class="section level1">
-<h1>2018 Meetups</h1>
+<div id="section-2" class="section level2">
+<h2>2018</h2>
 <table class="table table-striped table-hover" style="margin-left: auto; margin-right: auto;">
 <thead>
 <tr>
@@ -664,8 +693,8 @@ IMAGE
 </table>
 <p><br/></p>
 </div>
-<div id="meetups-3" class="section level1">
-<h1>2017 Meetups</h1>
+<div id="section-3" class="section level2">
+<h2>2017</h2>
 <table class="table table-striped table-hover" style="margin-left: auto; margin-right: auto;">
 <thead>
 <tr>
@@ -766,8 +795,8 @@ IMAGE
 </table>
 <p><br/></p>
 </div>
-<div id="meetups-4" class="section level1">
-<h1>2011-2016 Meetups</h1>
+<div id="section-4" class="section level2">
+<h2>2011-2016</h2>
 <table class="table table-striped table-hover" style="margin-left: auto; margin-right: auto;">
 <thead>
 <tr>
@@ -855,6 +884,7 @@ IMAGE
 </tbody>
 </table>
 <p><br/></p>
+</div>
 </div>
 
 
