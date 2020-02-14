@@ -373,8 +373,12 @@ $(document).ready(function () {
   margin-right: auto;
 }
 
-.navbar-collapse.collapse.in {
-  display: block!important;
+@media only screen and (max-width: 1200px) {
+  #navbar > ul > li > a {
+     font-size: 0;
+     display:inline-block;
+  }
+  .fa { font-size: initial; }
 }
 </style>
 <p><br/> <br/></p>
