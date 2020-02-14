@@ -33,7 +33,3 @@ layout: default
 <br/>
 <br/>
 
-
-# **IIT Stuart**
-![](images/IIT-Stuart-icon.jpg)
-
