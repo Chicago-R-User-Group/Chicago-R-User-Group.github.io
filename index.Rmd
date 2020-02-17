@@ -29,10 +29,7 @@ layout: default
 
 ### We are the Chicago R User Group (CRUG), a regional group who organizes and host meetup events for users in the open source R environment to foster collaboration, education, and networking in the data science Chicago ecosystem. Take a tour below of our past events exploring all aspects of analytics and data science.
 
-
 ---
-
-<br/>
 
 ```{r echo = FALSE, message = FALSE}
 library(kableExtra)
@@ -119,7 +116,12 @@ kable_styling(kable(meetup_df, escape = FALSE, align = "lc"),
               bootstrap_options = c("striped", "hover"))
 ```
 
+## Latest
 
+<div style="text-align:center"><a href="https://parfaitg.shinyapps.io/CRUG_Attendance_App/" target="_blank"><h3>CRUG Attendance Shiny App</h3><img src="images/r_shiny.png" width="100px" alt="crug logo"/></a></div>
+
+<br/>
+<br/>
 <br/>
 
 
