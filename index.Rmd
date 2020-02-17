@@ -22,20 +22,23 @@ layout: default
 <div style="text-align:right"><img src="images/header-background.png" alt="crug logo"/></div>
 
 
-### We are the Chicago R User Group (CRUG), a local meetup group who organizes and host events for users in the open source R environment to foster collaboration, education, and networking in the data science Chicago ecosystem. Take a tour below of our past events exploring all aspects of analytics and data science.
+### We are the Chicago R User Group (CRUG), a regional group who organizes and host meetup events for users in the open source R environment to foster collaboration, education, and networking in the data science Chicago ecosystem. Take a tour below of our past events exploring all aspects of analytics and data science.
 
 
 ---
 
 <br/>
 
-```{r echo=FALSE}
+```{r echo = FALSE, message = FALSE}
 library(kableExtra)
+library(xts)
+library(RUGtools)
+library(plotly)
 ```
 
 
 ```{r echo=FALSE}
-crug_df <- within(read.csv("crug_meetups.csv"), {
+crug_df <- within(read.csv("data/crug_meetups.csv"), {
   IMAGE <- paste0('<img src="', IMAGE, '" alt="meetup icon"/>')
   MEETUP <- paste0('<a href="', LINK, '"><h4>', EVENT, '</h4></a>')
   rm(LINK, EVENT)
@@ -62,7 +65,6 @@ kable_styling(kable(meetup_df , escape = FALSE, align = "lc"),
 
 
 ```{r echo=FALSE}
-
 meetup_df <- data.frame(transform(subset(crug_df, YEAR == 2019), YEAR = NULL)[c("MEETUP", "IMAGE")],
                         row.names = NULL)
 
@@ -116,5 +118,134 @@ kable_styling(kable(meetup_df, escape = FALSE, align = "lc"),
 <br/>
 
 
+# Data Analysis
 
 
+```{r echo = FALSE}
+member_list <- within(read.csv("data/crug_members.csv", stringsAsFactors = FALSE), {
+                      Joined.Group.on <- as.Date(Joined.Group.on, format="%B %d, %Y")
+                      Last.visited.group.on <- as.Date(Last.visited.group.on, format="%B %d, %Y")
+                      Last.Attended <- as.Date(Last.Attended, format="%B %d, %Y")
+               })
+
+member_list <- data.frame(with(member_list, member_list[order(Joined.Group.on),]),
+                          row.names = NULL)
+```
+
+
+```{r echo = FALSE, fig.width = 12, fig.height = 5}
+plot(y = seq(1, nrow(member_list)), x = member_list$Joined.Group.on, type = "l", lwd=2, 
+     col = "blue", frame = FALSE, main = "Chicago R User Group members", 
+     ylab = "Members", xlab = "", ylim = c(0, 4000))
+```
+
+
+```{r echo = FALSE}
+new_members <- new_mem_counter(member_list)
+```
+
+
+```{r echo = FALSE, fig.width = 12, fig.height = 5}
+# Create Date Range Index
+Range <- new_members[new_members$Date > "2010-01-01" & new_members$Date <= Sys.Date(),]
+Date_Index <- as.numeric(row.names(Range))
+
+# Create x-axis labels, using year-month date format
+x_labels <- format(new_members$Date[Date_Index], "%Y-%m")
+
+# Plot
+barplot(new_members$New[Date_Index], names.arg = x_labels, las=2,
+       main = "CRUG members, joined between meetups", ylim=c(0,4000),
+       ylab = "New Members", xlab = "", col="lightblue")
+```
+
+```{r echo = FALSE, fig.width = 12, fig.height = 5}
+members_xts <- xts(x = seq(1, nrow(member_list)), order.by = member_list$Joined.Group.on)
+names(members_xts) <- "useRs"
+
+members_monthly <- to.monthly(members_xts, OHLC = FALSE)
+barplot(diff(members_monthly), col = "cornflowerblue", 
+        main = "Chicago R User Group, new members by month")
+```
+
+
+```{r echo = FALSE, fig.width = 12, fig.height = 5}
+barplot(100*diff(members_monthly)[-c(1,2)]/members_monthly[-c(1,2)], col = "lightblue3",
+        main = "CRUG Growth since inception", ylab="Percent")
+```
+
+```{r echo = FALSE, fig.width = 12, fig.height = 5}
+members_3_years <- 100*diff(members_monthly["2016-02/"]) / members_monthly["2016-02/"]
+barplot(members_3_years, col = "lightblue3", main = "CRUG Growth, last 4 years", ylab="Percent")
+```
+
+
+```{r echo = FALSE, fig.width = 12, fig.height = 5, warning = FALSE}
+month_percent_growth <- c(NA, NA, NA, NA, 100*diff(log(coredata(members_monthly))), NA, NA, NA, NA, NA, NA, NA)
+seasonal_matrix <- matrix(month_percent_growth, ncol = 12, byrow = TRUE)
+colnames(seasonal_matrix) <- month.abb
+rownames(seasonal_matrix) <- 2010:2020
+
+seasonal_matrix <- rbind(seasonal_matrix, Median=round(apply(seasonal_matrix, 2, median, na.rm=TRUE), 2))
+
+kable_styling(kable(seasonal_matrix, digits=2, caption = "Percentage Growth per Month"),
+              bootstrap_options = c("striped", "hover"))
+```
+
+
+```{r echo = FALSE, fig.width = 12, fig.height = 5, warning = FALSE}
+boxplot(Meetups.attended ~ Year, 
+        data = transform(member_list, Year = format(Joined.Group.on, "%Y")),
+        main = "Members' Meetups Attended by Joined Year", col=rainbow(10))
+```
+
+<br/>
+<br/>
+
+
+```{r echo = FALSE, fig.width = 12, fig.height = 6, warning = FALSE}
+location_agg <- aggregate(Member.ID ~ code,
+                          transform(member_list, code = gsub(".*, ", "", member_list$Location)),
+                          FUN=length)
+location_agg <- subset(location_agg, nchar(as.character(code)) == 2)
+
+location_agg <- within(location_agg, 
+                       hover <- paste(code, '<br>', "Total:", Member.ID)
+               )
+```
+
+
+```{r echo = FALSE, fig.width = 12, fig.height = 5, warning = FALSE}
+# give state boundaries a white border
+l <- list(color = toRGB("white"), width = 2)
+# specify some map projection/options
+t <- list(
+  family = "Arial",
+  size = 14,
+  color = 'blue')
+
+g <- list(
+  scope = 'usa',
+  projection = list(type = 'albers usa'),
+  showlakes = TRUE,
+  lakecolor = toRGB('white')
+)
+
+p <- plot_geo(location_agg, locationmode = 'USA-states') %>%
+  add_trace(
+    z = ~Member.ID, text = ~hover, locations = ~code,
+    color = ~Member.ID, colors = 'Blues'
+  ) %>%
+  colorbar(title = "Members") %>%
+  layout(
+    title = "CRUG Members' Locations Across US",
+    geo = g,
+    font = t,
+    margin = list(t = 40)
+  )
+
+p
+```
+
+<br/>
+<br/>
