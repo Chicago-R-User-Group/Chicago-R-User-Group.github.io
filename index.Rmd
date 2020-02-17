@@ -130,11 +130,12 @@ member_list <- within(read.csv("data/crug_members.csv", stringsAsFactors = FALSE
 
 member_list <- data.frame(with(member_list, member_list[order(Joined.Group.on),]),
                           row.names = NULL)
+member_list$Member.ID <- seq(nrow(member_list))
 ```
 
 
 ```{r echo = FALSE, fig.width = 12, fig.height = 5}
-plot(y = seq(1, nrow(member_list)), x = member_list$Joined.Group.on, type = "l", lwd=2, 
+plot(y = member_list$Member.ID, x = member_list$Joined.Group.on, type = "l", lwd=2, 
      col = "blue", frame = FALSE, main = "Chicago R User Group members", 
      ylab = "Members", xlab = "", ylim = c(0, 4000))
 ```
@@ -155,33 +156,34 @@ x_labels <- format(new_members$Date[Date_Index], "%Y-%m")
 
 # Plot
 barplot(new_members$New[Date_Index], names.arg = x_labels, las=2,
-       main = "CRUG members, joined between meetups", ylim=c(0,4000),
+       main = "CRUG members, joined between meetups",
        ylab = "New Members", xlab = "", col="lightblue")
 ```
 
 ```{r echo = FALSE, fig.width = 12, fig.height = 5}
-members_xts <- xts(x = seq(1, nrow(member_list)), order.by = member_list$Joined.Group.on)
+members_xts <- xts(x = member_list$Member.ID, order.by = member_list$Joined.Group.on)
 names(members_xts) <- "useRs"
 
 members_monthly <- to.monthly(members_xts, OHLC = FALSE)
-barplot(diff(members_monthly), col = "cornflowerblue", 
+barplot(diff(members_monthly), col = "cornflowerblue", ylim = c(0, 100),
         main = "Chicago R User Group, new members by month")
 ```
 
 
 ```{r echo = FALSE, fig.width = 12, fig.height = 5}
 barplot(100*diff(members_monthly)[-c(1,2)]/members_monthly[-c(1,2)], col = "lightblue3",
-        main = "CRUG Growth since inception", ylab="Percent")
+        main = "CRUG Growth since inception", ylab="Percent", ylim =c(0, 20))
 ```
 
 ```{r echo = FALSE, fig.width = 12, fig.height = 5}
 members_3_years <- 100*diff(members_monthly["2016-02/"]) / members_monthly["2016-02/"]
-barplot(members_3_years, col = "lightblue3", main = "CRUG Growth, last 4 years", ylab="Percent")
+barplot(members_3_years, col = "lightblue3", main = "CRUG Growth, last 4 years", 
+        ylab="Percent", ylim = c(0,4))
 ```
 
 
-```{r echo = FALSE, fig.width = 12, fig.height = 5, warning = FALSE}
-month_percent_growth <- c(NA, NA, NA, NA, 100*diff(log(coredata(members_monthly))), NA, NA, NA, NA, NA, NA, NA)
+```{r echo = FALSE, fig.width = 12, fig.height = 5}
+month_percent_growth <- c(NA, NA, NA, NA, 100*diff(log(coredata(members_monthly))), rep(NA, 10))
 seasonal_matrix <- matrix(month_percent_growth, ncol = 12, byrow = TRUE)
 colnames(seasonal_matrix) <- month.abb
 rownames(seasonal_matrix) <- 2010:2020
@@ -191,6 +193,15 @@ seasonal_matrix <- rbind(seasonal_matrix, Median=round(apply(seasonal_matrix, 2,
 kable_styling(kable(seasonal_matrix, digits=2, caption = "Percentage Growth per Month"),
               bootstrap_options = c("striped", "hover"))
 ```
+
+```{r echo = FALSE, fig.width = 12, fig.height = 20}
+par(mfrow=c(6, 2), mar=c(3,3,1,1))
+output <- lapply(1:nrow(seasonal_matrix), function(i)
+   barplot(seasonal_matrix[i,], col=rainbow(12), ylim=range(pretty(c(0, seasonal_matrix[i,]))),
+                 main = paste("Percent Monthly Growith - ", row.names(seasonal_matrix)[i]), beside=TRUE)
+)
+```
+
 
 
 ```{r echo = FALSE, fig.width = 12, fig.height = 5, warning = FALSE}
@@ -210,12 +221,12 @@ location_agg <- aggregate(Member.ID ~ code,
 location_agg <- subset(location_agg, nchar(as.character(code)) == 2)
 
 location_agg <- within(location_agg, 
-                       hover <- paste(code, '<br>', "Total:", Member.ID)
+                       hover <- as.character(code)
                )
 ```
 
 
-```{r echo = FALSE, fig.width = 12, fig.height = 5, warning = FALSE}
+```{r echo = FALSE, fig.width = 12, fig.height = 6, fig.align="center", warning = FALSE}
 # give state boundaries a white border
 l <- list(color = toRGB("white"), width = 2)
 # specify some map projection/options

@@ -27,7 +27,7 @@ layout: default
 <br/>
 
 
-# **To connect and collaborate.**
+### **To connect and collaborate.**
 
 ```r
 all_useRs <- merge(crug, world, by="people.id", all=TRUE)
@@ -36,7 +36,7 @@ all_useRs <- merge(crug, world, by="people.id", all=TRUE)
 <br/>
 
 
-# **To build relationships locally and globally.**
+### **To build relationships locally and globally.**
 
 ```r
 community <- do.call(rbind, eapply(.GlobalEnv, identity))
@@ -44,7 +44,7 @@ community <- do.call(rbind, eapply(.GlobalEnv, identity))
 
 <br/>
 
-# **To empower and inspire.**
+### **To empower and inspire.**
 
 ```r
 useRs <- useRs ^ Inf
@@ -52,7 +52,7 @@ useRs <- useRs ^ Inf
 
 <br/>
 
-# **To promote and engage.**
+### **To promote and engage.**
 
 ```r
 View(community)
@@ -60,7 +60,7 @@ View(community)
 
 <br/>
 
-# **To help and educate.**
+### **To help and educate.**
 
 ```r
 ?help
