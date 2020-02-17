@@ -16,6 +16,11 @@ layout: default
      display:inline-block;
   }
   .fa { font-size: initial; }
+  
+  .plotly.html-widget {
+     max-width: 100%;
+     height: 200px;
+  }
 }
 </style>
 
@@ -147,6 +152,16 @@ new_members <- new_mem_counter(member_list)
 
 
 ```{r echo = FALSE, fig.width = 12, fig.height = 5}
+members_xts <- xts(x = member_list$Member.ID, order.by = member_list$Joined.Group.on)
+names(members_xts) <- "useRs"
+
+members_monthly <- to.monthly(members_xts, OHLC = FALSE)
+barplot(diff(members_monthly), col = "cornflowerblue", ylim = c(0, 100),
+        main = "Chicago R User Group, new members by month")
+```
+
+
+```{r echo = FALSE, fig.width = 12, fig.height = 5}
 # Create Date Range Index
 Range <- new_members[new_members$Date > "2010-01-01" & new_members$Date <= Sys.Date(),]
 Date_Index <- as.numeric(row.names(Range))
@@ -155,18 +170,9 @@ Date_Index <- as.numeric(row.names(Range))
 x_labels <- format(new_members$Date[Date_Index], "%Y-%m")
 
 # Plot
-barplot(new_members$New[Date_Index], names.arg = x_labels, las=2,
-       main = "CRUG members, joined between meetups",
-       ylab = "New Members", xlab = "", col="lightblue")
-```
-
-```{r echo = FALSE, fig.width = 12, fig.height = 5}
-members_xts <- xts(x = member_list$Member.ID, order.by = member_list$Joined.Group.on)
-names(members_xts) <- "useRs"
-
-members_monthly <- to.monthly(members_xts, OHLC = FALSE)
-barplot(diff(members_monthly), col = "cornflowerblue", ylim = c(0, 100),
-        main = "Chicago R User Group, new members by month")
+plot.xts(xts(x = new_members$New[Date_Index], order.by = new_members$Date[Date_Index]),
+         main = "CRUG members, joined between meetups", grid.col = "white",
+         ylab = "New Members", xlab = "", col="blue")
 ```
 
 
@@ -249,13 +255,15 @@ p <- plot_geo(location_agg, locationmode = 'USA-states') %>%
   ) %>%
   colorbar(title = "Members") %>%
   layout(
+    width=1000,
+    height=500,
     title = "CRUG Members' Locations Across US",
     geo = g,
     font = t,
-    margin = list(t = 40)
+    margin = list(t = 40, l = 5, r = 10, b = 40)
   )
 
-p
+htmltools::div(p, align="center")
 ```
 
 <br/>
