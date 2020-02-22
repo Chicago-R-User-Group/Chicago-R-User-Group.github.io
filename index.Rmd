@@ -1,5 +1,5 @@
 ---
-title: Chicago R User Group (CRUG)
+title: "Chicago R User Group (CRUG)"
 layout: default
 ---
 
