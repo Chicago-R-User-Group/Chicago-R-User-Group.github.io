@@ -22,9 +22,9 @@ layout: default
 <br/>
 <br/>
 
-### Founded in circa 2009-2010, CRUG has become a cornerstone of the Chicago R community. Today, in its second generation of leadership CRUG has grown to over 3,800 members.
+### Founded in circa 2009-2010, CRUG has become a cornerstone of the Chicago R community. Today, in the third generation of leadership, CRUG has grown to over 3,800 members.
 
-### Below are current organizers made up of various analytical backgrounds: from mathematicians and statisticians to data analysts and scientists to economists and transportation planners to professors.
+### Below are current organizers made up of various analytical backgrounds including mathematicians & statisticians, data analysts & scientists, technology executive architects, financial risk managers, transportation planners, and professors.
 
 ---
 
@@ -34,18 +34,18 @@ library(kableExtra)
 ```
 
 ```{r echo=FALSE}
-crug_df <- data.frame(Organizer = c('<h4>Justin Shea</h4>', '<h4>Troy Hernandez</h4>', '<h4>Charlotte Frei</h4>',
-                                    '<h4>Adam Ginensky</h4>', '<h4>Parfait Gasana</h4>'),
-                      Title = c('<h4>Econ Professor/Consultant,</h4> <h5><i>Frequency trader expert, CPU machine builder, and<br/> conference/co-organizer leader<br/>who advocates <code>base</code> and <code>data.table</code> solutions!</i></h5>', 
-                                '<h4>IBM Architect,</h4> <h5><i>Politically active data scientist and statistician<br/>working on 21st C. issues!</i></h5>', 
+crug_df <- data.frame(Organizer = c('<h4> Anne Corinne Carroll</h4>','<h4> Charlotte Frei, PhD</h4>',     '<h4>Parfait Gasana</h4>', '<h4>Adam Ginensky, PhD</h4>','<h4>Troy Hernandez, PhD</h4>','<h4>Justin M Shea</h4>'),
+                      Title = c('<h4>Director of Assessment and Evaluation at Rush University</h4> <h5><i>  Quantitative social scientist applying theory and research.<br/> Background includes test development and validation, structural equation modeling, <br/> multilevel modeling, longitudinal analysis, invariance testing, mediation, and moderation</i></h5>',
                                 '<h4>Transportation Planner,</h4> <h5><i>Licensed engineer with PhD who uses R in novel ways<br/>with data, maps, and more!</i></h5>',
-                                '<h4>Applied Mathematician,</h4> <h5><i>Machine learning connoisseur who brings pure and<br/>applied math to quantitative finance!</i></h5>', 
-                                '<h4>Econ Data Analyst,</h4> <h5><i>Polygot analytics expert in Python, SQL, VBA,<br/> and more who looks to extend <code>base</code> R!</i></h5>'),
-                      Image = c('<img src="images/linkedin_justin-shea.png" alt="organizer photo"/>',
-                                '<img src="images/linkedin_troy_hernandez.jpeg" alt="organizer photo"/>',
+                                '<h4>Econ Data Analyst,</h4> <h5><i> MS in Economics specializing in <br/> data analytics including migration, visualization, aggregation, and modeling <br/> (Excel, Python Pandas/Numpy, R, Stata, SAS); <br/> database development (MS Access, PostgreSQL, MySQL, SQL Server); and <br/> data engineering (ETL migration, API integration, parsing XML/JSON, ODBC/JDBC connection). <br/> SO Gold badges in R, Python, and SQL. https://stackoverflow.com/users/1422451/parfait </i></h5>',                                   '<h4>Associate Director, Risk in OTC Structured Products,</h4> <h5><i>Machine learning connoisseur who brings pure and<br/>applied math to quantitative finance</i></h5>',
+                                '<h4>IBM Executive Architect,</h4> <h5><i>Data scientist, activist, and <br/> Chairman of the Cook County Green Party. <br/> https://troyhernandez.com/ </i></h5>',
+                                '<h4>Director, CCCF Honors Finance/Assistant Professor of Finance,</h4> <h5><i>Google Summer of Code R-project Evaluating Mentor, <br/> Quantitative Finance & Data Analytics consultant, and <br/> conference/co-organizer leader</i></h5>'),
+                  Image = c('<img src="images/linkedin_Anne_Corinne_Carroll.jpeg" alt="organizer photo"/>',
                                 '<img src="images/linkedin_charlotte-frei.png" alt="organizer photo"/>',
+                                '<img src="images/linkedin_parfait_gasana.jpeg" alt="organizer photo"/>',
                                 '<img src="images/linkedin_adam_ginensky.jpeg" alt="organizer photo"/>',
-                                '<img src="images/linkedin_parfait_gasana.jpeg" alt="organizer photo"/>'))
+                                '<img src="images/linkedin_troy_hernandez.jpeg" alt="organizer photo"/>',
+                                '<img src="images/linkedin_justin-shea.png" alt="organizer photo"/>'))
 ```
 
 
