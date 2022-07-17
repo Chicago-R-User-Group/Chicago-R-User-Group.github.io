@@ -125,7 +125,7 @@ kable_styling(kable(meetup_df, escape = FALSE, align = "lc"),
 <br/>
 
 
-# Data Analysis
+# Membership Data Analysis
 
 
 ```{r echo = FALSE}
@@ -144,7 +144,7 @@ plot(y = member_list$Member.ID, x = member_list$Joined.Group.on, type = "l", lwd
 
 
 ```{r echo = FALSE}
-new_members <- new_mem_counter(member_list)
+new_members <- suppressWarnings(new_mem_counter(member_list))
 ```
 
 
@@ -169,7 +169,9 @@ x_labels <- format(new_members$Date[Date_Index], "%Y-%m")
 # Plot
 plot.xts(xts(x = new_members$New[Date_Index], order.by = new_members$Date[Date_Index]),
          main = "CRUG members, joined between meetups", grid.col = "white",
-         ylab = "New Members", xlab = "", col="blue")
+         ylim = c(0, max(Range$New)+10), ylab = "New Members", 
+         xlab = "", col="blue")
+
 ```
 
 
@@ -186,10 +188,20 @@ barplot(members_3_years, col = "lightblue3", main = "CRUG Growth, last 4 years",
 
 
 ```{r echo = FALSE, fig.width = 12, fig.height = 5}
-month_percent_growth <- c(NA, NA, NA, NA, 100*diff(log(coredata(members_monthly))), rep(NA, 10))
+last_date <- as.POSIXct(
+  attributes(members_monthly[nrow(members_monthly)])$index[[1]],
+  origin = "1970-01-01",
+  tz = "UTC"
+)
+
+month_percent_growth <- c(
+  NA, NA, NA, NA, 
+  100*diff(log(coredata(members_monthly))), 
+  rep(NA, 12-as.integer(format(last_date, "%m")))
+)
 seasonal_matrix <- matrix(month_percent_growth, ncol = 12, byrow = TRUE)
 colnames(seasonal_matrix) <- month.abb
-rownames(seasonal_matrix) <- 2010:2020
+rownames(seasonal_matrix) <- 2010:as.integer(format(last_date, "%Y"))
 
 seasonal_matrix <- rbind(seasonal_matrix, Median=round(apply(seasonal_matrix, 2, median, na.rm=TRUE), 2))
 
@@ -201,7 +213,7 @@ kable_styling(kable(seasonal_matrix, digits=2, caption = "Percentage Growth per 
 seabornPalette <- c('#4878d0', '#ee854a', '#6acc64', '#d65f5f', '#956cb4', '#8c613c', 
                     '#dc7ec0', '#797979', '#d5bb67', '#82c6e2', '#4878d0', '#ee854a')
 
-par(mfrow=c(6, 2), mar=c(3,3,1,1))
+par(mfrow=c(7, 2), mar=c(3,3,1,1))
 output <- lapply(1:nrow(seasonal_matrix), function(i)
    barplot(seasonal_matrix[i,], col=seabornPalette[1:12], ylim=range(pretty(c(0, seasonal_matrix[i,]))),
                  main = paste("Percent Monthly Growith - ", row.names(seasonal_matrix)[i]), beside=TRUE)
@@ -221,18 +233,18 @@ boxplot(Meetups.attended ~ Year,
 
 
 ```{r echo = FALSE, fig.width = 12, fig.height = 6, warning = FALSE}
-location_agg <- aggregate(Member.ID ~ code,
-                          transform(member_list, code = gsub(".*, ", "", member_list$Location)),
-                          FUN=length)
+location_agg <- aggregate(
+  Member.ID ~ code,
+  transform(member_list, code = gsub(".*, ", "", member_list$Location)),
+  FUN=length
+)
 location_agg <- subset(location_agg, nchar(as.character(code)) == 2)
 
-location_agg <- within(location_agg, 
-                       hover <- as.character(code)
-               )
+location_agg <- within(location_agg, hover <- as.character(code))
 ```
 
 
-```{r echo = FALSE, fig.width = 12, fig.height = 6, fig.align="center", warning = FALSE}
+```{r echo = FALSE, fig.width = 6, fig.height = 3, fig.align="center", warning = FALSE}
 # give state boundaries a white border
 l <- list(color = toRGB("white"), width = 2)
 # specify some map projection/options
