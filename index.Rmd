@@ -24,7 +24,7 @@ layout: default
 }
 </style>
 
-<div style="text-align:right"><img src="images/header-background.png" alt="crug logo" width="400px"/></div>
+<div style="text-align:right"><img src="images/CRUG_IBM.png" alt="crug logo" width="400px"/></div>
 
 
 ### We are the Chicago R User Group (CRUG), a regional group who organizes and host meetup events for users in the open source R environment to foster collaboration, education, and networking in the data science Chicago ecosystem. Take a tour below of our past events exploring all aspects of analytics and data science.
