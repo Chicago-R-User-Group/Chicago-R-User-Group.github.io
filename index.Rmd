@@ -24,7 +24,7 @@ layout: default
 }
 </style>
 
-<div style="text-align:right"><img src="images/header-background.png" alt="crug logo"/></div>
+<div style="text-align:right"><img src="images/header-background.png" alt="crug logo" width="400px"/></div>
 
 
 ### We are the Chicago R User Group (CRUG), a regional group who organizes and host meetup events for users in the open source R environment to foster collaboration, education, and networking in the data science Chicago ecosystem. Take a tour below of our past events exploring all aspects of analytics and data science.
@@ -49,11 +49,11 @@ crug_df <- within(read.csv("data/crug_meetups.csv"), {
 
 # Meetups {.tabset .tabset-fade .tabset-pills}
 
-## 2020
+## 2020-2022
 
 
 ```{r echo=FALSE}
-meetup_df <- data.frame(transform(subset(crug_df, YEAR == 2020), YEAR = NULL)[c("MEETUP", "IMAGE")],
+meetup_df <- data.frame(transform(subset(crug_df, YEAR >= 2020 & YEAR <= 2022), YEAR = NULL)[c("MEETUP", "IMAGE")],
                         row.names = NULL)
 
 kable_styling(kable(meetup_df , escape = FALSE, align = "lc"),
@@ -129,12 +129,7 @@ kable_styling(kable(meetup_df, escape = FALSE, align = "lc"),
 
 
 ```{r echo = FALSE}
-member_list <- within(read.csv("data/crug_members.csv", stringsAsFactors = FALSE), {
-                      Joined.Group.on <- as.Date(Joined.Group.on, format="%B %d, %Y")
-                      Last.visited.group.on <- as.Date(Last.visited.group.on, format="%B %d, %Y")
-                      Last.Attended <- as.Date(Last.Attended, format="%B %d, %Y")
-               })
-
+member_list <- RUGtools::meetup_import("data/crug_members.csv", format = "%B %d, %Y")
 member_list <- data.frame(with(member_list, member_list[order(Joined.Group.on),]),
                           row.names = NULL)
 member_list$Member.ID <- seq(nrow(member_list))
